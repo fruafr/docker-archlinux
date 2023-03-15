@@ -8,7 +8,6 @@ ENV container=docker
 # Fix pacman key problem
 # https://bbs.archlinux.org/viewtopic.php?id=193382
 RUN rm -R /etc/pacman.d/gnupg/
-RUN rm -R /root/.gnupg/ 
 RUN gpg --refresh-keys
 RUN pacman-key --init && pacman-key --populate
 RUN pacman-key --refresh-keys
