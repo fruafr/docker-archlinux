@@ -28,7 +28,7 @@ Oldest versions on docker are :
 |--------------|------------------|-------------------------------------|------------|---------------|
 |2019          |20191205          |`docker pull fruafr/archlinux:20191205`     |     |20191205       |
 
-For this version, the keyring had to be fixed manually by refreshing the keyring and coping the new archlinux-keyring. 
+For this version, the keyring had to be fixed manually by refreshing the keyring and copying the new archlinux-keyring. 
 The version 20191006 was not created.
 
 ## Pull strategy
