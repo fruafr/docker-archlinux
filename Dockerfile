@@ -18,7 +18,7 @@ RUN echo "keyserver hkp://keyserver.ubuntu.com" >> /etc/pacman.d/gnupg/gpg.conf
 COPY archlinux-keyring-20230225-1-any.pkg.tar.zst /tmp/
 RUN pacman -U /tmp/archlinux-keyring-20230225-1-any.pkg.tar.zst
 RUN rm /tmp/archlinux-keyring-20230225-1-any.pkg.tar.zst
-RUN pacman -S archlinux-keyring
+RUN yes | LC_ALL=en_US.UTF-8 pacman -S archlinux-keyring
 
 #refresh the keys
 RUN pacman-key --refresh-keys 
