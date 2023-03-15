@@ -50,8 +50,6 @@ docker run \
 - [Docker Hub](https://hub.docker.com/_/archlinux)
 - [ArchLinux releases](https://archlinux.org/releng/releases/)
 
-### Versions History 
-
 ### Current
 
 |ArchLinux Version   |Docker image tag                         |Current Version |Repo Branch   |
