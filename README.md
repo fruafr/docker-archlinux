@@ -50,9 +50,9 @@ docker run \
 - [Docker Hub](https://hub.docker.com/_/archlinux)
 - [ArchLinux releases](https://archlinux.org/releng/releases/)
 
-## Versions History 
+### Versions History 
 
-## Current
+### Current
 
 |ArchLinux Version   |Docker image tag                         |Current Version |Repo Branch   |
 |--------------------|-----------------------------------------|----------------|--------------|
@@ -60,7 +60,7 @@ docker run \
 |base                |`docker pull archlinux:base`    |20230312        |base          |
 |base-devel          |`docker pull archlinux:base-devel`    |?               |base-devel    |
 
-## Versions History
+### Versions History
 
 Arch Linux is a lightweight rolling-release distribution with very detailed documentation regarding [setup](https://wiki.archlinux.org/title/Category:Servers).
 
