@@ -6,7 +6,7 @@ LABEL build_date="2023-03-15"
 ENV container=docker
 
 # Fix pacman key problem
-RUN sudo pacman -S archlinux-keyring
+RUN pacman -S archlinux-keyring
 # https://bbs.archlinux.org/viewtopic.php?id=193382
 #RUN rm -R /etc/pacman.d/gnupg/
 #RUN gpg --refresh-keys
