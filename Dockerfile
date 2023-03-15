@@ -10,7 +10,10 @@ ENV container=docker
 RUN rm -R /etc/pacman.d/gnupg/
 RUN gpg --refresh-keys
 RUN pacman-key --init && pacman-key --populate
-RUN pacman-key --refresh-keys
+# https://bbs.archlinux.org/viewtopic.php?id=226770
+RUN pacman -S pacman
+RUN pacman -S $(pacman -Qq)
+#RUN pacman-key --refresh-keys
 
 # Update packages
 RUN yes | LC_ALL=en_US.UTF-8 pacman -Syu
