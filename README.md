@@ -42,7 +42,7 @@ docker run \
   --tty \
   --privileged \
   --volume /sys/fs/cgroup:/sys/fs/cgroup:ro \
-  fruafr/alpine
+  fruafr/archlinux
 ```
 
 ## Official Distro Release Information
