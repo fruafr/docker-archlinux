@@ -6,7 +6,7 @@ The Dockerfiles are available in the [fruafr/docker-archlinux Github repository]
 
 The resulting docker containers are available in the [fruafr/archlinux Docker Hub](https://hub.docker.com/repository/docker/fruafr/archlinux)
 
-[![Archlinux build status](https://img.shields.io/docker/cloud/build/fruafr/archlinux.svg)](https://hub.docker.com/repository/docker/fruafr/archlinux)
+[![archlinux build status](https://img.shields.io/docker/cloud/build/fruafr/archlinux.svg)](https://hub.docker.com/repository/docker/fruafr/archlinux)
 
 ## Versions History 
 
