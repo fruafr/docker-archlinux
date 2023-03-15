@@ -11,12 +11,17 @@ RUN rm -R /etc/pacman.d/gnupg/
 RUN gpg --refresh-keys
 RUN pacman-key --init && pacman-key --populate
 
+# Fix keyserver issue
 RUN echo "keyserver hkp://keyserver.ubuntu.com" >> /etc/pacman.d/gnupg/gpg.conf
-RUN pacman-key --refresh-keys 
 
-# https://bbs.archlinux.org/viewtopic.php?id=226770
-#RUN yes | LC_ALL=en_US.UTF-8 pacman -Sy pacman
-#RUN yes | LC_ALL=en_US.UTF-8 pacman -Sy $(pacman -Qq)
+# Fix archlinux-keyring issue
+RUN wget https://archlinux.org/packages/core/any/archlinux-keyring/download -O archlinux-keyring-20210902-1-any.pkg.tar.zst
+RUN pacman -U archlinux-keyring-20210902-1-any.pkg.tar.zst
+RUN rm archlinux-keyring-20210902-1-any.pkg.tar.zst
+RUN pacman -S archlinux-keyring
+
+#refresh the keys
+RUN pacman-key --refresh-keys 
 
 # Update packages
 RUN yes | LC_ALL=en_US.UTF-8 pacman -Syu
