@@ -1,4 +1,4 @@
-FROM archlinux:base
+FROM archlinux:base-devel
 
 LABEL maintainer="David HEURTEVENT <david@heurtevent.org>"
 LABEL build_date="2023-03-15"
