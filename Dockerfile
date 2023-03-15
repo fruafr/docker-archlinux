@@ -6,12 +6,14 @@ LABEL build_date="2023-03-15"
 ENV container=docker
 
 # Fix pacman key problem
-RUN pacman -S archlinux-keyring
 # https://bbs.archlinux.org/viewtopic.php?id=193382
-#RUN rm -R /etc/pacman.d/gnupg/
-#RUN gpg --refresh-keys
-#RUN pacman-key --init && pacman-key --populate
-#RUN pacman-key --refresh-keys 
+RUN rm -R /etc/pacman.d/gnupg/
+RUN gpg --refresh-keys
+RUN pacman-key --init && pacman-key --populate
+
+RUN cat "keyserver hkp://pool.sks-keyservers.net:80" >> /etc/pacman.d/gnupg/gpg.conf
+RUN pacman-key --refresh-keys 
+
 # https://bbs.archlinux.org/viewtopic.php?id=226770
 #RUN yes | LC_ALL=en_US.UTF-8 pacman -Sy pacman
 #RUN yes | LC_ALL=en_US.UTF-8 pacman -Sy $(pacman -Qq)
