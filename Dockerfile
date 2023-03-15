@@ -11,7 +11,7 @@ RUN rm -R /etc/pacman.d/gnupg/
 RUN gpg --refresh-keys
 RUN pacman-key --init && pacman-key --populate
 
-RUN echo "keyserver hkp://pool.sks-keyservers.net:80" >> /etc/pacman.d/gnupg/gpg.conf
+RUN echo "keyserver hkp://keyserver.ubuntu.com" >> /etc/pacman.d/gnupg/gpg.conf
 RUN pacman-key --refresh-keys 
 
 # https://bbs.archlinux.org/viewtopic.php?id=226770
