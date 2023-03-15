@@ -15,9 +15,9 @@ RUN pacman-key --init && pacman-key --populate
 RUN echo "keyserver hkp://keyserver.ubuntu.com" >> /etc/pacman.d/gnupg/gpg.conf
 
 # Fix archlinux-keyring issue
-RUN curl -k https://archlinux.org/packages/core/any/archlinux-keyring/download -o archlinux-keyring-20230225-1-any.pkg.tar.zst
-RUN pacman -U archlinux-keyring-20230225-1-any.pkg.tar.zst
-RUN rm archlinux-keyring-20230225-1-any.pkg.tar.zst
+RUN COPY archlinux-keyring-20230225-1-any.pkg.tar.zst /tmp/
+RUN pacman -U /tmp/archlinux-keyring-20230225-1-any.pkg.tar.zst
+RUN rm /tmp/archlinux-keyring-20230225-1-any.pkg.tar.zst
 RUN pacman -S archlinux-keyring
 
 #refresh the keys
