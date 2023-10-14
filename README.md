@@ -6,16 +6,14 @@ The Dockerfiles are available in the [fruafr/docker-archlinux Github repository]
 
 The resulting docker containers are available in the [fruafr/archlinux Docker Hub](https://hub.docker.com/repository/docker/fruafr/archlinux)
 
-[![archlinux build status](https://img.shields.io/docker/cloud/build/fruafr/archlinux.svg)](https://hub.docker.com/repository/docker/fruafr/archlinux)
-
 ## Versions History 
 
 ## Current
 
 |ArchLinux Version   |Docker image tag                         |Current Version |Repo Branch   |
 |--------------------|-----------------------------------------|----------------|--------------|
-|latest              |`docker pull fruafr/archlinux:latest`    |20230312        |latest        |
-|base                |`docker pull fruafr/archlinux:base`    |20230312        |base          |
+|latest              |`docker pull fruafr/archlinux:latest`    |daily        |latest        |
+|base                |`docker pull fruafr/archlinux:base`    |daily        |base          |
 |base-devel          |`docker pull fruafr/archlinux:base-devel`    |?               |base-devel    |
 
 ## Versions History
@@ -54,8 +52,8 @@ docker run \
 
 |ArchLinux Version   |Docker image tag                         |Current Version |Repo Branch   |
 |--------------------|-----------------------------------------|----------------|--------------|
-|latest              |`docker pull archlinux:latest`    |20230312        |latest        |
-|base                |`docker pull archlinux:base`    |20230312        |base          |
+|latest              |`docker pull archlinux:latest`    |daily        |latest        |
+|base                |`docker pull archlinux:base`    |daily        |base          |
 |base-devel          |`docker pull archlinux:base-devel`    |?               |base-devel    |
 
 ### Versions History
@@ -70,4 +68,4 @@ Oldest versions on docker are :
 |2019          |20191006          |`docker pull archlinux:20191006`     |            |20191006       |
 
 ----
-Updated : 2023-03-15
+Updated : 2023-10-14
